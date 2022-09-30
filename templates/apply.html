@@ -1,0 +1,134 @@
+{% block content%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        body {
+            background: -webkit-linear-gradient(left, #f8f8f8, #fafcfc);
+        }
+
+        .contact-form {
+            background: #fff;
+            margin-top: 10%;
+            margin-bottom: 5%;
+            width: 70%;
+        }
+
+        .contact-form .form-control {
+            border-radius: 1rem;
+        }
+
+        .contact-image {
+            text-align: center;
+        }
+
+        .contact-image img {
+            border-radius: 6rem;
+            width: 11%;
+            margin-top: -3%;
+            transform: rotate(29deg);
+        }
+
+        .contact-form form {
+            padding: 14%;
+        }
+
+        .contact-form form .row {
+            margin-bottom: -7%;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 8%;
+            margin-top: -10%;
+            text-align: center;
+            color: #0062cc;
+        }
+
+        .contact-form .btnContact {
+            width: 50%;
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5%;
+            background: #38b446;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btnContactSubmit {
+            width: 50%;
+            border-radius: 1rem;
+            padding: 1.5%;
+            color: #fff;
+            background-color: #0062cc;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="data:image/png;base64,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" alt="rocket_contact"/>
+        </div>
+        <form method="post">
+            <h3>Please fill in the application form</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="president">Purpose</label>
+                        <select class="form-control" name="pres">
+                        <option>Budget supplement</option>
+                        <option>School fees</option>
+                        <option>Medical expenses</option>
+                        <option>Business Capital</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="president">Request Amount</label>
+                        <select class="form-control" name="sum_requested">
+                        <option>10000</option>
+                        <option>20000</option>
+                        <option>50000</option>
+                        <option>100000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnCapture" class="btnContact"  value="Apply" />
+                    </div>
+                    <br/>
+                    <br/>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="president">Additional information</label>
+                        <textarea class="form-control" name="infor" required></textarea>                        </textarea>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            {%with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                            <p>{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+        </form>
+</div>
+</body>
+
+</html>
+{% endblock %}
