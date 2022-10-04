@@ -2,4 +2,5 @@
 
 requirements
 database -> prosgresql
+test
 
