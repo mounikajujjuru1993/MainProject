@@ -77,9 +77,9 @@ class Application_approved(db.Model):
         
 
 
-# create_admin=Admin('admin','admin123')
-# db.session.add(create_admin)
-# db.session.commit() 
+create_admin=Admin('admin','admin123')
+db.session.add(create_admin)
+db.session.commit() 
 
 
 
