@@ -2,5 +2,4 @@
 
 requirements
 database -> prosgresql
-test cd
 
