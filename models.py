@@ -75,6 +75,12 @@ class Application_approved(db.Model):
         self.approver  = approver 
         self.date_approved = date_approved
         
+        
+    create_admin=Admin(username="admin",password_string="admin123")
+    db.session.add(create_admin)
+    db.session.commit() 
+
+        
 
  
 
